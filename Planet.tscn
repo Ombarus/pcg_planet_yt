@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://PlanetMeshFace.gd" type="Script" id=1]
+[ext_resource path="res://Planet.gd" type="Script" id=2]
+
+[node name="Planet" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Up" type="MeshInstance" parent="."]
+script = ExtResource( 1 )
+normal = Vector3( 0, 1, 0 )
+
+[node name="Down" type="MeshInstance" parent="."]
+script = ExtResource( 1 )
+normal = Vector3( 0, -1, 0 )
+
+[node name="Left" type="MeshInstance" parent="."]
+script = ExtResource( 1 )
+normal = Vector3( -1, 0, 0 )
+
+[node name="Right" type="MeshInstance" parent="."]
+script = ExtResource( 1 )
+normal = Vector3( 1, 0, 0 )
+
+[node name="Front" type="MeshInstance" parent="."]
+script = ExtResource( 1 )
+normal = Vector3( 0, 0, -1 )
+
+[node name="Back" type="MeshInstance" parent="."]
+script = ExtResource( 1 )
+normal = Vector3( 0, 0, 1 )

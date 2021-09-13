@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Planet.tscn" type="PackedScene" id=1]
+
+[node name="Main" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.960269, 0.279075, 0, -0.279075, 0.960269, 0, 1.18331, 2.51723 )
+
+[node name="Planet" parent="." instance=ExtResource( 1 )]
