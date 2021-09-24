@@ -1,9 +1,10 @@
+tool
 extends MeshInstance
 class_name PlanetMeshFace
 
 export var normal : Vector3
 
-func regenerate_mesh():
+func regenerate_mesh(planet_data : PlanetData):
 	var arrays := []
 	arrays.resize(Mesh.ARRAY_MAX)
 	
@@ -12,7 +13,7 @@ func regenerate_mesh():
 	var normal_array := PoolVector3Array()
 	var index_array := PoolIntArray()
 	
-	var resolution := 50
+	var resolution := planet_data.resolution
 	
 	var num_vertices : int = resolution * resolution
 	var num_indices : int = (resolution-1) * (resolution-1) * 6
@@ -30,7 +31,7 @@ func regenerate_mesh():
 			var i : int = x + y * resolution
 			var percent := Vector2(x,y) / (resolution-1)
 			var pointOnUnitCube : Vector3 = normal + (percent.x-0.5) * 2.0 * axisA + (percent.y-0.5) * 2.0 * axisB
-			var pointOnUnitSphere := pointOnUnitCube.normalized()
+			var pointOnUnitSphere := pointOnUnitCube.normalized() * planet_data.radius
 			vertex_array[i] = pointOnUnitSphere
 			
 			if x != resolution-1 and y != resolution-1:

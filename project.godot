@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Resource",
+"class": "PlanetData",
+"language": "GDScript",
+"path": "res://PlanetData.gd"
+}, {
 "base": "MeshInstance",
 "class": "PlanetMeshFace",
 "language": "GDScript",
 "path": "res://PlanetMeshFace.gd"
 } ]
 _global_script_class_icons={
+"PlanetData": "",
 "PlanetMeshFace": ""
 }
 
