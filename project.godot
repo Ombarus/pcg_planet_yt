@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "PlanetMeshFace",
 "language": "GDScript",
 "path": "res://PlanetMeshFace.gd"
+}, {
+"base": "Resource",
+"class": "PlanetNoise",
+"language": "GDScript",
+"path": "res://PlanetNoise.gd"
 } ]
 _global_script_class_icons={
 "PlanetData": "",
-"PlanetMeshFace": ""
+"PlanetMeshFace": "",
+"PlanetNoise": ""
 }
 
 [application]
