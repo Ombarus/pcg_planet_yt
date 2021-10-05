@@ -6,6 +6,16 @@ class_name PlanetData
 export var radius := 1.0 setget set_radius
 export var resolution := 10 setget set_resolution
 export(Array, Resource) var planet_noise setget set_planet_noise
+export var planet_color : GradientTexture setget set_planet_color
+
+var min_height := 99999.0
+var max_height := 0.0
+
+func set_planet_color(val):
+	planet_color = val
+	if planet_color != null and not planet_color.is_connected("changed", self, "on_data_changed"):
+		planet_color.connect("changed", self, "on_data_changed")
+
 
 func set_radius(val):
 	radius = val
