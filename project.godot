@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Resource",
+"class": "PlanetBiome",
+"language": "GDScript",
+"path": "res://PlanetBiome.gd"
+}, {
+"base": "Resource",
 "class": "PlanetData",
 "language": "GDScript",
 "path": "res://PlanetData.gd"
@@ -25,6 +30,7 @@ _global_script_classes=[ {
 "path": "res://PlanetNoise.gd"
 } ]
 _global_script_class_icons={
+"PlanetBiome": "",
 "PlanetData": "",
 "PlanetMeshFace": "",
 "PlanetNoise": ""
@@ -33,6 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="pcg_planet_2"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
 [physics]
